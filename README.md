@@ -11,3 +11,5 @@ You can find the initial files for the workshop in the ‘starter-files’ folde
 4. Github Pages - Presented by Tianrui Guo, Kenny Closser, and Abhishyant Khare
 
 HTML LINK: https://docs.google.com/presentation/d/1VP0e8bsWvGffCNNk-1MJQQxHOv0CY1fpsI9-jJcj52k/edit?usp=sharing
+
+CSS LINK: https://docs.google.com/presentation/d/1IDaC0vWZJMivVWN4tToeo0sKF4G0tJ_l_YGcQVD7yrw/edit#slide=id.p
