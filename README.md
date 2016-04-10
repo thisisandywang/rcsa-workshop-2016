@@ -9,3 +9,5 @@ You can find the initial files for the workshop in the ‘starter-files’ folde
 2. HTML - Presented by Camille Stuczynski and Albert Hu
 3. CSS - Presented by Morgan Rae Reschenberg and Lily Seitelman
 4. Github Pages - Presented by Tianrui Guo, Kenny Closser, and Abhishyant Khare
+
+HTML LINK: https://docs.google.com/presentation/d/1VP0e8bsWvGffCNNk-1MJQQxHOv0CY1fpsI9-jJcj52k/edit?usp=sharing
