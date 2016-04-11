@@ -1,0 +1,28 @@
+/* <link rel="stylesheet" href="styles.css"> */
+/* this goes in the HEAD tags of your HTML file */
+
+
+body {
+	padding-top: 50px;
+}
+
+h1 {
+	font-family: 'Century Gothic', sans-serif;
+}
+
+p {
+	font-weight: bold;
+	font-size: 12px;
+	font-family: 'Times New Roman';
+	color: red;
+}
+
+h2 {
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 20px;
+}
+
+h3 {
+	font-family: 'Century Gothic';
+}
+
