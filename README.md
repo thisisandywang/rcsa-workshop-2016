@@ -5,10 +5,9 @@ This workshop is presented by the RCSA Web Development Team 2015-2016. The inten
 You can find the initial files for the workshop in the ‘starter-files’ folder. There are also finished examples in the ‘examples’ folder.
 
 ## Timeline
-1. Bootstrap - Presented by Andy Wang and Jacqueline Liu
-2. HTML - Presented by Camille Stuczynski and Albert Hu
-3. CSS - Presented by Morgan Rae Reschenberg and Lily Seitelman
-4. Github Pages - Presented by Tianrui Guo, Kenny Closser, and Abhishyant Khare
+1. HTML - Presented by Camille Stuczynski and Albert Hu
+2. CSS - Presented by Morgan Rae Reschenberg and Lily Seitelman
+3. Github Pages - Presented by Tianrui Guo, Kenny Closser, and Abhishyant Khare
 
 HTML LINK: https://docs.google.com/presentation/d/1VP0e8bsWvGffCNNk-1MJQQxHOv0CY1fpsI9-jJcj52k/edit?usp=sharing
 
