@@ -1,0 +1,26 @@
+div.splash-bg {
+    background-image: url('../img/home.png');
+    background-repeat:no-repeat;
+    height: 100vh;
+	background-position: top;
+	background-size: 100% 100%;
+}
+
+.splash-text {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.jumbotron p {
+  font-size: 18px; 
+  height: 100%;
+}
+
+.social img {
+	height: 30px;
+}
+
+.social {
+	margin: 0 auto;
+	width: 150px;
+}

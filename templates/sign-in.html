@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}Sign-in{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+   <div class="row">
+      {% autoescape on %}
+        <form action="/sign-in/{{ event.pk }}" method="post" class="form-signin">
+            {% csrf_token %}
+            <h1> Welcome to the {{ event.name }}!</h1>
+            <h3 class="form-signin-heading">Please sign in with your RCSA email address if applicable</h3>
+            <input type="text" id="email" class="input-block-level" placeholder="Email address" name="email" value="{{ email }}">
+            <label for="email_input"> {{ state }} </label>
+            <br>
+            <div class="radio">
+              <label>
+                <input type="radio" name="House" id="houser" value="R" checked>
+                Rockefeller
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="House" id="housec" value="C">
+                Chavez
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="House" id="houses" value="S">
+                Savio
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="House" id="housea" value="A">
+                Apperson
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="House" id="housenone" value="N">
+                N/A
+              </label>
+            </div>
+            <input class="btn btn-large btn-primary" type="submit" value="Sign in" />
+        </form>
+      {% endautoescape %}
+   </div>
+</div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

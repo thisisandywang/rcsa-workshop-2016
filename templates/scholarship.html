@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}The Scholarship{% endblock %}
+<!--    Navigation select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+    -->
+    {% block tab-scholarship %}active{% endblock %}
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/scholarship.css' %}" />
+{% endblock %}
+
+
+    <!-- Main content -->
+    {% block content %}
+    <div class="jumbotron parallax splash-bg">
+    </div>
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see:http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+<div class="row">
+    <br>
+    <center>
+        <h1> THE SCHOLARSHIP</h1>
+    </center>
+    <br>
+    <div class="col-md-10 col-md-offset-1 crop photo1">
+        <p id="intro">The Regents’ and Chancellor’s Scholarship is the most prestigious scholarship offered by UC Berkeley to entering undergraduates and attracts, retains, and graduates the most sought-after students in the world. The program, granted by the Undergraduate Scholarships, Prizes, and Honors Office (USPHO), is firmly supported by more than 200 Berkeley faculty and is unique in that it uses faculty to interview candidates.
+        <br><br>
+        All recipients of the R&C Scholarship are members of the Regents' and Chancellor's Scholars Association (RCSA) by default. Membership lasts throughout entire period of enrollment at UC Berkeley. <br><br></p>
+    </div>
+
+    <div class="col-md-10 col-md-offset-1">
+    <button type="button" class="btn btn-info albert" data-toggle="collapse" data-target="#receiving_scholarship">RECEIVING THE SCHOLARSHIP</button>
+    <div id="receiving_scholarship" class="collapse">
+        <div class="button_box">
+            <span class="text">
+                <br>
+                Those who are selected to interview for the R&C Scholarship will be notified via e-mail or phone call during February or March of the admissions cycle in the year they are applying to attend UC Berkeley. Selections for interviews are based on the candidate’s UC application – there is no special application specifically for the scholarship. Interviews are conducted by UC Berkeley faculty in San Diego, Los Angeles, and Berkeley. <br><br>
+                Acceptance decisions for the scholarship are announced at the end of March. There is no application or appeals process for current and continuing students to get the scholarship.<br><br>
+            </span>
+            <span class="photo">
+                <img src="{% static 'img/scholarships_page/pretty_picture.jpg' %}">
+            </span>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-info albert " data-toggle="collapse" data-target="#university_sponsored">UNIVERSITY-PROVIDED BENEFITS</button>
+    <div id="university_sponsored" class="collapse">
+        <div class="button_box">
+            <span class="photo">
+                <img src="{% static 'img/scholarships_page/Resume_workshop.jpg' %}">
+            </span>
+            <span class="text">
+                <br><span class="bold_yellow">Honorarium</span>: Scholarship recipients can talk to the Financial Advisors in the the Undergraduate Scholarships, Prizes, and Honors Office(USPHO) for assistance with the monetary aspeect of the scholarship. There is a $2500 annual honorarium.<br><br>
+                <span class="bold_yellow">Priority Registration</span>: Priority class registration applies in phases. Scholarship recipients get priority for Tele-BEARS Phase 1 (10.5 units) and Phase 2 (15.5 units + 1 class), respectively. Please note that priority does not apply for Phase 1 of their Freshman year – as such, scholarship recipients are encouraged to attend an early orientation (CalSO) date.<br><br>
+                <span class="bold_yellow">Housing</span>: Campus housing is guaranteed for four years. Scholars must apply for University Housing via the UC Berkeley housing portal every spring for the following year’s housing.<br><br>
+                <span class="bold_yellow">Access to Research Fellowships</span>: Periodic e-blasts from scholarship advisors will inform members of opportunities to take part in programs and apply for fellowships.<br><br>
+                <span class="bold_yellow">Weekly Newsletter</span>: RCSA has a weekly newsletter distributed to all scholars that contains opportunities for networking, jobs, etc... <br><br>
+            </span>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-info albert" data-toggle="collapse" data-target="#mentorship">FACULTY MENTORSHIP</button>
+    <div id="mentorship" class="collapse">
+        <div class="button_box">
+            <span class="text">
+                <br>There are three main people who serve you in an advisory role: <br><br>
+                <span class="bold_yellow">Scholarship Advisor</span>: A member of the USPHO team that helps with all matters pertaining to the scholarship.<br><br>
+                <span class="bold_yellow">Major Advisor</span>: A staff member, someone to go to for help regarding classes or academic plans. This may be a single person or a revolving person.<br><br>
+                <span class="bold_yellow">RC Faculty Mentor</span>: A professor or lecturer who has volunteered to serve scholarship recipients in a mentorship capacity. The information regarding your mentor is disseminated via e-mail from USPHO by September of your first academic year.<br><br>
+            </span>
+            <span class="photo">
+                <img src="{% static 'img/scholarships_page/Talking_to_faculty.jpg' %}">
+            </span>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-info albert" data-toggle="collapse" data-target="#fambam">MEMBERSHIP IN RCSA</button>
+    <div id="fambam" class="collapse">
+        <div class="button_box">
+            <span class="photo">
+                <img src="{% static 'img/scholarships_page/Welcome.jpg'%}">
+            </span>
+            <span class="text">
+                <br><span class="bold_yellow">About Us</span>: RCSA is one of the largest student organizations on campus, comprising of a variety of students from all sorts of backgrounds and majors.  Through our expansive network of faculty, alumni, and notable Bay Area individuals, members are exposed to an enormous range of academic, social, and professional opportunities.<br><br>
+
+                <span class="bold_yellow">Active Membership</span>: Members can earn an ‘active member’ designation by attending at least 2 events per semester for half their semesters at UC Berkeley. For those who graduate with an odd number of semesters, the semester requirement is rounded up. For example, graduating in 7 semesters would mean that you still have to be active in 4 of those semesters to be considered an active member. Members must sign in at events to formally record attendance – no ex post facto attendance will be granted.<br><br>
+            </span>
+        </div> 
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

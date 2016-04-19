@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}Dashboard{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+    <!-- This is the quick information column where you can see house points,
+    top 5 scholars by house points, and top 5 events by attendance-->
+   <div class="col-md-4">
+
+    <!-- House points -->
+    <div class="row">
+        <div class = "information-headers">
+            <h2> House Points </h2>
+        </div>
+
+        <div class="col-md-6">
+            <p><strong>Rockefeller</strong>: {{ house_points.R }} <br>
+             <strong>Chavez</strong>: {{ house_points.C }}
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <p><strong>Savio</strong>: {{ house_points.S }} <br>
+             <strong>Apperson</strong>: {{ house_points.A }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Top 5 Scholars -->
+    <div class="row">
+        <div class = "information-headers">
+            <h2> Top 5 Scholars </h2>
+        </div>
+
+        {% if top_5_scholars %}
+        {% for scholar in top_5_scholars %}
+        <p> <strong>{{ scholar.0}}</strong>: {{ scholar.1 }}</p>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- Top 5 Events -->
+    <div class="row">
+        <div class = "information-headers">
+            <h2> Top 5 Events </h2>
+        </div>
+
+        {% if top_5_events %}
+        {% for event in top_5_events %}
+        <p> <strong>{{ event.name }}</strong>: {{ event.num_attendees }} people attended</p>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+   </div>
+
+    <!-- This is the main column where you can view all for events, house point
+    earnings, and students-->
+   <div class="col-md-4">
+    <div class="row">
+        <div class = "main-header">
+            <h2> Welcome, {{ user_name }}! </h2>
+        </div>
+
+        <p> This is the RCSA Leadership Dashboard. Here, you can view quick
+            information on the left, like <strong><em>House Points</em></strong>, the <strong><em>Top 5 Scholars</em></strong> based on house points earned, and the <strong><em> Top 5 Events </em></strong> based on attendance.
+            On the right, you can <strong><em>add</em></strong> and <strong><em>modify</em></strong> events and house points sans an event. Below, you can <strong><em>choose</em></strong> an event to sign attendees into and <strong><em>view</em></strong> all events, non-event house point additions, and scholars. </p>
+    </div>
+    <div class="row">
+        <div id = "action_list">
+            <ul>
+                <li onclick="location.href = './choose-event';" onmouseover="" style="cursor: pointer;">Choose Event to Sign-in</li>
+                <li onclick="location.href = './all-events/';" onmouseover="" style="cursor: pointer;">View All Events </li>
+                <li onclick="location.href = './house-point-additions';" onmouseover="" style="cursor: pointer;">View All House Point Additions</li>
+                <li onclick="location.href = './all-scholars';" onmouseover="" style="cursor: pointer;">View All Scholars</li>
+            </ul>
+        </div>
+    </div>
+   </div>
+
+    <!-- This is the modify column where you can add and modify events and house points earnings-->
+   <div class="col-md-4">
+        <div class = "main-header">
+            <h2> Add / Modify</h2>
+        </div>
+        <div id = "action_list">
+            <ul>
+                <li onclick="location.href = './event/';" onmouseover="" style="cursor: pointer;">Add Event</li>
+                <li onclick="location.href = './all-events/modify';" onmouseover="" style="cursor: pointer;">Modify Event </li>
+                <li onclick="location.href = './house-point-addition/';" onmouseover="" style="cursor: pointer;">Add House Point Addition</li>
+                <li onclick="location.href = './house-point-additions/modify';" onmouseover="" style="cursor: pointer;">Modify House Point Addition</li>
+            </ul>
+        </div>
+   </div>
+</div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

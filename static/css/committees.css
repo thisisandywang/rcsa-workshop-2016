@@ -1,0 +1,168 @@
+h1, h3, h4 {
+	text-align: top;
+}
+
+th {
+	font-size: 20px;
+}
+
+#intro {
+	text-align: justify;
+}
+
+#text {
+	text-align: justify;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+
+.pictureContainer {
+	background: url("../img/committee_page/committees_member.jpg");
+	background-position: center;
+	color:transparent;
+}
+.pictureContainer:hover {
+	background: transparent;
+	color:black;
+	background-position: center;
+}
+
+.saContainer {
+	background: #004382 url("../img/committee_page/StudentActivitiesCommittee.jpg");
+	background-position: center;
+	color: transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.saContainer:hover {
+	background: transparent;
+	color: black;
+}
+.houseContainer {
+	background: #fdb515 url("../img/committee_page/HouseLeaders.jpg");
+	background-position: center;
+	color: transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.houseContainer:hover {
+	background: transparent;
+	color:black;
+}
+.facultyContainer {
+	background: #fdb515 url("../img/committee_page/FacultyCommittee.jpg");
+	background-position: center;
+	color: transparent;
+	background-size: 130%;
+	background-repeat: no-repeat;
+}
+.facultyContainer:hover {
+	background: transparent;
+	color:black;
+}
+.TedXContainer {
+	background: url("../img/committee_page/TXCommittee.jpg");
+	background-position: center;
+	background-size: 130%;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-color: #fdb515;
+}
+.TedXContainer:hover {
+	background: transparent;
+	color:black;
+}
+.ProfCommitteeContainer {
+	background: url("../img/committee_page/ProfCommittee.jpg");
+	background-position: center;
+	
+	background-size: 130%;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-color: #004382;
+}
+.ProfCommitteeContainer:hover {
+	background: transparent;
+	color:black;
+}
+.MMCommitteeContainer {
+	background: url("../img/committee_page/MMCommittee.jpg");
+	background-position: center;
+	background-size: 130%;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-color: #004382;
+}
+.MMCommitteeContainer:hover {
+	background: transparent;
+	color:black;
+}
+.ROHPCommitteeContainer {
+	background: url("../img/committee_page/ROHPCommittee.jpg");
+	background-position: center;
+	background-color: #004382;
+	background-size: 130%;
+	background-repeat: no-repeat;
+	color: transparent;
+	
+}
+.ROHPCommitteeContainer:hover {
+	background: transparent;
+	color:black;
+}
+.SustainabilityCommitteeContainer {
+	background: url("../img/committee_page/SustainabilityCommittee.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: transparent;
+	background-color: #fdb515;
+}
+.SustainabilityCommitteeContainer:hover {
+	background: transparent;
+	color:black;
+}
+.WebDevContainer {
+	background: #004382 url("../img/committee_page/WebDevCommittee.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	color: transparent;
+}
+.WebDevContainer:hover {
+	background: transparent;
+	color:black;
+}
+.CorpRelContainer {
+	background: #fdb515 url("../img/committee_page/CorpRelCommittee.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	color: transparent;
+}
+.CorpRelContainer:hover {
+	background: transparent;
+	color:black;
+}
+.LiaisonContainer {
+	background: #fdb515 url("../img/committee_page/LiaisonCommittee.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	color: transparent;
+}
+.LiaisonContainer:hover {
+	background: transparent;
+	color:black;
+}
+.AlumniContainer {
+	background: #004382 url("../img/committee_page/AlumniCommittee.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	color: transparent;
+}
+.AlumniContainer:hover {
+	background: transparent;
+	color:black;
+}

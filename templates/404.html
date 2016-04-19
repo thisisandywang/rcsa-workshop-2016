@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}Oops!{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/error.css' %}" />
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+  <div class="container">
+   <div class="row">
+      <div id="sad">
+          <img src="{% static 'img/sad_bear.jpg' %}">
+  		</div>
+  		<div class="text">
+	  		<div id="title">
+	  			LE BEAR IS SAD
+	  		</div>
+	  		<div id="sub-text">
+	  			The page you were looking for cannot be found.
+	  		</div>
+	  	</div>
+    </div>
+  </div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

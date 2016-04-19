@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}Home{% endblock %}
+{% block tab-home %}active{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron splash-bg">
+   <div class="container">
+      <div class="row">
+        <div class="col-md-9 splash-text">
+        <h1>Regents' and Chancellors' Scholars Association</h1>
+        <p><h3>University of California, Berkeley</h3></p>
+        </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

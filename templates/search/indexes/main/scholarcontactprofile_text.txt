@@ -1,0 +1,7 @@
+{{ object.name }}
+{{ object.email }}
+{{ object.majors }}
+{{ object.minors}}
+{{ object.year}}
+{{ object.interests_extracurriculars}}
+{{ object.blurb }}

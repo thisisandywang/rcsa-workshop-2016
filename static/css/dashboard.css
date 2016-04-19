@@ -1,0 +1,40 @@
+/* This is the styling for the quick information column. */
+
+.information-headers {
+    margin: 1em 0 .6em 0;
+    font-weight: normal;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    color: #428bca;
+    text-decoration: underline;
+}
+
+/* This is the styling for the main column. */
+
+.main-header {
+    margin: 1em 0 .6em 0;
+    font-weight: normal;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    color: #428bca;
+    text-decoration: italic;
+}
+
+
+/* List of actions */
+#action_list { }
+#action_list ul { list-style-image: url("../img/arrow1.png"); font-size:18px; }
+#action_list ul li {
+    line-height:30px; 
+    -webkit-transition: transform 0.25s ease;}
+#action_list li:hover { 
+    -webkit-transform: scale(1.05,1.05);
+    -webkit-transition: transform 0.25s ease;
+    /*-webkit-box-shadow:10px 10px 20px #000000;*/
+
+
+
+
+}
+
+/* This is the styling for the modify column. */

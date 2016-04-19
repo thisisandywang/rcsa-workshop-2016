@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}{{ student.name }}'s Profile{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/scholar_contact.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/ihover.css' %}" />
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+	<div class="row">
+	 <div style="width:100%">
+      <input class="btn btn-primary" value="Back to Profile Search" onClick="javascript:history.go(-1);">
+   	</div>
+   </div>
+   <div class="row">
+   	<div id="profile_name">
+   		<h1>Hi! I'm {{ student.name }}</h1>
+      <br>
+   	</div>
+    </div>
+    <div class="row row-centered">
+   	<div class="col-sm-4 col-centered">
+   		<div id="contact">
+            <div class="ih-item circle effect1"><a href="javascript:void(0)">
+                <div class="spinnerLeft"></div>
+                <div class="img"><img src="{% static student.picture %}"></div>
+                </a>
+            </div>
+            <div id="details">
+              <b>Major(s):</b> {{ student.majors }}
+          		<br>
+              {% if student.minors and student.minors.strip %}
+              <b>Minor(s):</b> {{ student.minors }}
+              <br>
+              {% else %}
+              {% endif %}
+              <b>Year:</b> {{ student.year }}
+              <br>
+          		<b>Email:</b> {{ student.email }}
+          		<br>
+          	</div>
+            <br>
+            <a class="btn btn-success" href="mailto:{{ student.email }}?subject=[RCSA ScholarConnect]&cc=rcsascholarconnect@gmail.com">Contact Now</a>
+          </div>
+    <br>
+    <br>
+   </div>
+   <div class="col-sm-8 col-centered">
+   		<div id="about">
+   			<b>About Me:</b> <div class="content"> {{ student.blurb }} </div>
+   			<br>
+   			<b>Interests and Extracurriculars:</b> <div class="content"> {{ student.interests_extracurriculars }} </div>
+   			<br>
+        {% for tag in student.get_tags %}
+          <a href="../scholarconnect/&amp;tag={{ tag }}"><span class="tag">{{ tag }}</span></a>
+        {% endfor %}
+        <br>
+        <br>
+   	</div>
+   </div>
+   <br>
+   <br>
+ </div>
+</div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

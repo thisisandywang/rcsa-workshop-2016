@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}Scholar Contacts{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/sc_init.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/ihover.css' %}" />
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+
+<div class="container">
+  <div class="row" id="init-prompt">
+    <div class="col-md-6 extend-full" id="current">
+      <h3 id="name">
+        <div class="name-text" id="error-message">
+            <div id="error">
+            Invalid Email. Please try again.
+            </div>
+        </div>
+        <div class="name-text" id="cs">
+          <div id ="scholar">
+          Current Scholar
+          </div>
+        </div>
+        <div class="name-text" id="input-email">
+          <form id="cs-email">
+            Email: <input type="text" id="email-input" value="Input Berkeley Email">
+            <input id="submit-button">
+          </form>
+        </div>
+      </h3>
+    </div>
+    <div class="col-md-6 extend-full" id="prospective">
+      <h3 id="name">
+        <div class="name-text" id="ps">
+          <a href="../scholarconnect/ps-results/">
+          <div id="scholar">
+          Prospective Scholar
+          </div>
+          </a>
+        </div>
+      </h3>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+<script src="{% static 'js/sc.js' %}"></script>
+
+{% endblock %}

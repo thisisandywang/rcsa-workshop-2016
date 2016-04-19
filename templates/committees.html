@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}The Committees{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-committees %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+
+{% block css %}
+<link href="{% static 'css/committees.css' %}" rel="stylesheet" /> 
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<div class="continer-fluid parallax splash-bg">
+</div>
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+   <div class="row"> 
+
+
+<div class="col-lg-10 col-lg-offset-1">
+  <center><h1>THE COMMITTEES</h1></center>
+    <p id="intro">
+      Committees are approximately ten-person units (number varies by committee) that work towards a specific focus and set of goals in RCSA. They generally have weekly meetings to plan events, discuss future goals, and work on current projects. Through a combination of diligent work and fun, committees become a small family unit within the community of RCSA. As of the 2015-16 year, there are 11 total committees in RCSA. Each committee is overseen by 1-3 coordinators.</p><br>
+</div>
+  <div class="col-lg-12">
+    <center><img src="{% static 'img/committee_page/RCSA_members.jpg' %}" width="25%" align="left" hspace="20"></center>
+    <div id="text">
+      <center><h3>MEMBERS</h3></center>
+        <p>Committee member positions are year-long. Upon selection in mid-September, committee members will carry out the duties assigned to them until May. Responsibilities of individual members vary between committees, from addressing faculty, to organizing events, to updating the website. Due to the relatively small size of the committees, each member has an essential role in the success of their committee. Every year, those interested in a committee must re-submit an application and re-interview.</p>
+      
+        <center><h3>APPLICATION</h3></center>
+        <p>Applications to be on a committee usually open on the first Friday of the Fall semester each year. Any RCSA member, regardless of year or major, is welcome to apply to join a committee. Each member can apply for up to three committees, and after an application and interview process, will be placed onto a maximum of one committee. Due to a limited number of spaces, not all applicants will be offered a spot.</p>
+        <p>Applications to become committee coordinators become available sometime in March. Committee coordinator candidates are interviewed and selected by the Executive Committee in April. No previous RCSA experience is required to become a committee coordinator.</p>
+    </div>
+  </div>
+
+
+<div class="col-lg-12">
+  <div id= "text">
+    <center><h3>EXECUTIVE BRANCH</h3></center>
+    <p>The Executive Committee consists of the highest-ranking officers in the organizations. This consists of the President(s), External Vice President(s), Internal Vice President(s), which are all majority-vote elected positions (multiple people can choose to jointly run for each of these positions). It also consists of the Chief Operations Officer (COO) and the Chief Financial Officer (CFO), both of which are application-based positions appointed upon the selection of the initial three positions. </p>
+    <p>Each of these positions is in charge of their respective branch, in addition to special projects that each one chooses to take on. The COO is in charge of media and event management, while the CFO is in charge of budgeting and reimbursement.</p> 
+    <br>
+  </div>
+</div>
+
+<div class="col-lg-12">
+<table cellpadding="10">
+  <tr>
+    <th>INTERNAL BRANCH</th>
+    <td class="facultyContainer" valign="top" width="33%">      
+      <h4>Faculty</h4>
+      <p>Faculty Committee: connects scholars with faculty members via events, and maintains the database of Faculty Relations and contact information. Past events include Research Lunch with Cellular and Developmental Biology professors, Faculty Do-decathlon (playing an amazing-race-style series of mental and physical challenges with teams of faculty and students), Stargazing with Professor Filippenko, Brown Bag Lunch with Professor Carlson, Ultimate Frisbee with Professor Healy, Hike with Professor Bakhle and her Dogs, the annual Faculty Board Game Night, FaculTEA (talking to professors over tea and pastries).</p>
+      </div>
+    </td>
+
+    <td class="saContainer" valign="tofp" width="33%">  
+      <h4>Student Activities</h4>
+      <p>Student Activities Committee: organizes academic development events, updates and manages the RCSA Test Bank, facilitates the mentor-mentee program, and hosts banquets and other socials. Past events include Big C Hike, Meet & Greet, Tele-BEARS Advising Workshop, Haas Application Panel, Uncovering Paths to Law: Pre-Law Panel, Health Organization Panel, CS Internship Panel, House Olympics, and Fall Carnival.</p>
+    </td>
+    
+    <td class="houseContainer" valign="top" width="33%">        
+      <h4>House System</h4>
+      <p>House Leaders: organizes events for members of RCSA of that belong to their respective houses: Apperson, Chavez, Rockefeller, and Savio.</p>     
+    </td>
+  </tr>
+
+  <tr>
+    <th>EXTERNAL BRANCH</th>
+    <td class="AlumniContainer" valign="top" width="33%">
+      <h4>Alumni</h4>
+      <p>Alumni Committee: connects scholars with RCSA and UC Berkeley alumni via events and services, runs the Externship program over winter recess, partners with the UC Berkeley Alumni Relations Office. Past events include the Startup Panel, Pre-Med Panel, and the annual Alumni Networking Reception.</p>
+    </td>
+
+    <td class="LiaisonContainer" valign="top" width="33%">
+      <h4>Liaison</h4>
+      <p>Liaison Committee: hosts social events with scholar societies of other UC campuses, facilitates the College Connect program (where current RCSA scholars reach out to local high school campuses), coordinates community service events, manages attendance and logistical planning of inter-UC conference. Past events include the Berkeley Project, Ice Skating with UC Davis, Tailgate with UCLA, and The Amazing Race with UC Davis..</p>
+    </td>
+
+    <td class="ROHPCommitteeContainer" valign="top" width="33%">
+      <h4>ROHP</h4>
+      <p>ROHP Committee: collaborates with the USPHO, faculty, dean of students, ASUC, and other campus groups to coordinate the Regents’ Overnight Host Program (ROHP). For more information, go tot their website by clicking on "ROHP" in the navigation bar.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <th>FINANCE BRANCH</th>
+    <td class="CorpRelContainer" valign="top" width="33%">
+      <h4>Corporate Relations</h4>
+      <p>Corporate Relations Committee: compiles, promotes, and manages sales of the RCSA Résumé Book, maintains database of corporate partners for sponsorships, and coordinates events to connect scholars to recruiters. Past events include the annual Fall Career Reception, the Spring Internship Fair, and different company tours.</p>
+    </td>
+
+    <td class="ProfCommitteeContainer" valign="top" width="33%"> 
+      <h4>Professional Development</h4>
+      <p>Professional Development Committee: facilitates résumé critique and submission process for the résumé book and host workshops and other events that cater to professional needs of RCSA scholars. Past events include a speed-networking competition, dinner with CEO John Battelle, LinkedIn workshop with professional headshots, résumé workshop, elevator pitch workshop, and Excel workshop.</p>
+    </td>
+
+    <td class="TedXContainer" valign="top" width="33%">        
+      <h4>TEDxBerkeley</h4>
+      <p>TEDxBerkeley Committee: hosts the annual TEDxBerkeley conference, coordinates TED talk live stream events on campus, and recruits and trains volunteers (consisting entirely of RCSA volunteers) to help staff TEDxBerkeley. Check out their website by clicking on "TEDxBerkeley" in the navigation bar.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <th>OPERATIONS BRANCH</th>
+    <td class="MMCommitteeContainer" valign="top" width="33%">  
+      <h4>Media & Marketing</h4>
+      <p>Media & Marketing creates branding and promotional materials for committees and events, advertises organization-wide initiatives, and hosts workshops to foster design skills. Past events include ‘Design It!’ an Illustrator Informational, Adobe Photoshop Workshop, Photo Phest, InDesign Collaborative, and Maximizing your Snapsterpiece and Becoming Instafamous.</p>
+    </td>
+
+    <td class="SustainabilityCommitteeContainer" valign="top" width="33%">
+      <h4>Sustainability</h4>
+      <p>Sustainability ensures organizational abidance to green principles, manages the Green Certification process, educates scholars on the importance of environmental awareness, coordinates with other organizations to put together community service events, and hosts events in line with their purpose. Past events include California Drought Crisis Debate, Cowspiracy Movie Screening, and Clothing Swap.</p>
+    </td>
+
+    <td class="WebDevContainer" valign="top" width="33%">
+      <h4>Web Development</h4>
+      <p>Web Development maintains and updates the website you're currently looking at, manages the sign-in and point-keeping system, and works collaboratively with other committees to ensure that all relevant materials are posted in the accessible places. Past events include the Git & HTML/CSS Workshop.</p>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+{% endblock %}

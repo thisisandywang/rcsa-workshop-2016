@@ -1,0 +1,39 @@
+.albert{
+	width:100%;
+	border-color:white;
+	background-color: #1B7AD4;
+}
+
+#intro{
+	padding-right: 3%;
+	padding-left: 3%;
+	text-align: justify;
+}
+
+.bold_yellow{
+	color: #fdb515;
+	font-weight:bold;
+}
+
+.photo{
+	display:table-cell;
+	vertical-align: middle;
+	width: 50%;
+	padding: 5%;
+}
+
+.photo img {
+	width: 100%;
+}
+
+.text{
+	vertical-align:middle;
+	display:table-cell;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.button_box{
+	display:table;
+	text-align: justify;
+}

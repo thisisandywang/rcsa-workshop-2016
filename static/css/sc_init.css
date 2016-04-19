@@ -1,0 +1,55 @@
+#input-email {
+    display: none;
+    color: rgb(230, 230, 230);
+    font-size: 0.5em;
+}
+
+#submit-button {
+    display: none;
+}
+
+#current {
+    background: url('../img/sather.jpg');
+    background-size: cover;
+    z-index: 0;
+}
+
+#prospective {
+    background: url('../img/home.png');
+}
+
+#name {
+    opacity: 1.0;
+    padding-top: 40vh;
+    text-align: center;
+    font-size: 3.0em;
+    font-weight: bold;
+}
+.name-text {
+    padding-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 10px;
+    background-color: rgba(70, 70, 70, 0.8);
+    z-index: 1;
+}
+
+#scholar {
+    color: rgb(230, 230, 230);
+}
+#scholar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(230, 230, 230);
+}
+
+.extend-full{
+    height: 95vh;
+}
+
+#error-message {
+    display: none;
+}
+#error {
+    color: rgb(230, 230, 230);
+}

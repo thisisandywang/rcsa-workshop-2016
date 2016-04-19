@@ -1,0 +1,33 @@
+.row {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.text {
+    text-align: center;
+}
+.context-background {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 20px 50px 20px 50px;
+}
+.col-md-6 {
+  padding: 15px !important;
+}
+
+.custom-button {
+    display:block;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images {
+    display: block;
+    width: auto;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+

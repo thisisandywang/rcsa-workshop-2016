@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- Meta data -->
+{% block title %}House Point Additions{% endblock %}
+
+<!--    Navigation: select the right button to be active.
+        Change tab-home to one of the following {tab-home|tab-about|tab-rohp|tab-ss|tab-tedx|tab-contact}
+-->
+{% block tab-home %}active{% endblock %}
+
+
+<!--Any additional CSS files you want to include -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/all_events.css' %}" />
+{% endblock %}
+
+
+<!-- Main content -->
+{% block content %}
+<!--
+    Make sure all your content is within a column. Every column is placed within a row. A row must be within a container.
+    See the home page for an example of how this is done.
+
+    We do this because bootstrap has a grid system that takes care of all the nitty-gritty margin and padding details.
+
+    We are working with a 12 column grid, so make sure all your components fit within the 12-column grid. Don't try to
+    make a row with 13+ columns. If you need more space, make another row.
+
+    For more information about bootstrap's grid system, see: http://getbootstrap.com/css/#grid
+-->
+
+<div class="container">
+   <div class="row">
+    <h1> All House Point Additions </h1>
+    {% for semester, house_point_additions in hpa_by_semester %}
+      <div class="events_list">
+        <div class="semester"> {{ semester }}</div>
+        <div class="hpa">
+          {% if modify %}
+          <table class="table table-bordered table-hover table-striped">
+          {% else %}
+          <table class="table table-bordered table-striped">
+          {% endif %}
+              <thead>
+              <tr><td><strong> House Point Additions Name </strong> </td>
+                  <td><strong> Rockefeller Points</strong> </td>
+                  <td><strong> Chavez Points</strong> </td>
+                  <td><strong> Savio Points </strong></td>
+                  <td><strong> Apperson Points </strong> </td>
+                  <td><strong> Description </strong> </td>
+              </tr>
+              </thead>
+             {% for hpa in house_point_additions %}
+             {% if modify %}
+             <tr onclick="location.href = '../event/{{ event.name }}';" onmouseover="" style="cursor: pointer;">
+             {% else %}
+             <tr>
+             {% endif %}
+                      <td> {{ hpa.name }} </td>
+                      <td> {{ hpa.points_R }} </td>
+                      <td> {{ hpa.points_C }} </td>
+                      <td> {{ hpa.points_S }} </td>
+                      <td> {{ hpa.points_A }}</td>
+                      <td> {{ hpa.description }} </td>
+                  </tr>
+             {% endfor %}
+          </table>
+        </div>
+      </div>
+    {% endfor %}
+   </div>
+</div>
+{% endblock %}
+
+
+<!-- Any additional JavaScript files you want to include -->
+{% block javascripts %}
+<script>
+    $(".hpa").hide();
+    $(".semester").click(function () {
+        $(this).next(".hpa").slideToggle(500);
+    });
+</script>
+{% endblock %}
